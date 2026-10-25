@@ -1,34 +1,25 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DealController;
+use App\Http\Controllers\ProductController;
 use App\Models\Product;
 use App\Models\Click;
 use App\Services\InvolveAsiaService;
 use Illuminate\Support\Str;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Halaman Katalog Tampilan Preview
+Route::get('/', [DealController::class, 'index'])->name('home');
 
-Route::get('/go/{productId}', function ($productId, InvolveAsiaService $involveAsia) {
-    $product = Product::findOrFail($productId);
+// Rute Redirect Afiliasi dengan Sub-ID Tracking Involve Asia
+Route::get('/go/{id}', function ($id, InvolveAsiaService $involveAsia) {
+    $product = Product::findOrFail($id);
 
     $clickId = 'CLK_' . time() . '_' . Str::random(6);
-    $sub1 = session()->getId(); // ID Sesi Pengguna
-    $sub2 = $product->sku;      // SKU Produk
-    $sub3 = request('placement', 'deals_grid'); // Lokasi Tombol Klik
+    $sub1 = session()->getId();
+    $sub2 = $product->sku;
+    $sub3 = request('placement', 'deals_page');
 
-    // Simpan data klik
     Click::create([
         'click_id'   => $clickId,
         'sub_id1'    => $sub1,
@@ -39,12 +30,14 @@ Route::get('/go/{productId}', function ($productId, InvolveAsiaService $involveA
         'user_agent' => request()->userAgent(),
     ]);
 
-    // Hasilkan Deeplink Involve Asia
-    $trackingUrl = $involveAsia->generateDeeplink($product->shopee_url, [
+    $deeplink = $involveAsia->generateDeeplink($product->shopee_url, [
         'sub_id1' => $sub1,
         'sub_id2' => $sub2,
         'sub_id3' => $sub3,
     ]);
 
-    return redirect()->away($trackingUrl);
+    return redirect()->away($deeplink);
 })->name('affiliate.redirect');
+
+// Halaman Detail Produk Berdasarkan SKU (contoh: /product/baseus-65w-gan5)
+Route::get('/product/{sku}', [ProductController::class, 'show'])->name('product.show');

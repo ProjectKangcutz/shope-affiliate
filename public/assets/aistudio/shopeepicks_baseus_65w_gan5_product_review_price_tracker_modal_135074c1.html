@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-container": "#dae2fd", "on-primary-fixed": "#3e0500", "on-error-container": "#93000a", "secondary-fixed": "#dae2fd", "secondary-fixed-dim": "#bec6e0", "tertiary-fixed": "#6ffbbe", "on-tertiary-container": "#f5fff6", "outline-variant": "#e3beb6", "on-tertiary": "#ffffff", "on-primary-container": "#fffbff", "surface-variant": "#e0e3e5", "primary-fixed": "#ffdad3", "inverse-on-surface": "#eff1f3", "on-primary": "#ffffff", "surface": "#f7f9fb", "inverse-primary": "#ffb4a4", "surface-container-lowest": "#ffffff", "on-surface": "#191c1e", "secondary": "#565e74", "error-container": "#ffdad6", "surface-bright": "#f7f9fb", "surface-container-highest": "#e0e3e5", "primary": "#b22204", "surface-container-high": "#e6e8ea", "outline": "#8f7069", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#8d1600", "on-tertiary-fixed": "#002113", "on-secondary-container": "#5c647a", "surface-tint": "#b62506", "tertiary-container": "#00855b", "tertiary-fixed-dim": "#4edea3", "error": "#ba1a1a", "on-secondary-fixed": "#131b2e", "surface-dim": "#d8dadc", "inverse-surface": "#2d3133", "on-surface-variant": "#5b403b", "surface-container-low": "#f2f4f6", "on-secondary": "#ffffff", "primary-container": "#d63c1e", "tertiary": "#006947", "surface-container": "#eceef0", "on-background": "#191c1e", "on-error": "#ffffff", "background": "#f7f9fb", "on-secondary-fixed-variant": "#3f465c", "primary-fixed-dim": "#ffb4a4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "gutter": "1rem", "margin-mobile": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "display-hero": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "label-numeric-price": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "display-hero-mobile": [ "Plus Jakarta Sans" ], "label-badge": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "label-numeric-strike": [ "Plus Jakarta Sans" ], "label-action": [ "Plus Jakarta Sans" ] }, "fontSize": { "display-hero": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-numeric-price": [ "22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "display-hero-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-badge": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "label-numeric-strike": [ "13px", { "lineHeight": "16px", "fontWeight": "500" } ], "label-action": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="bg-primary text-on-primary py-space-xs px-margin"><div class="max-w-7xl mx-auto flex items-center justify-between font-label-badge text-label-badge"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm">bolt</span><span>⚡ 8.8 Mega Flash Sale Live! Up to 80% Off + Free Shipping Vouchers</span></div><div class="hidden md:flex items-center gap-space-md"><span class="opacity-90">Verified Price Drop Tracking</span><span class="opacity-90">•</span><span class="opacity-90">Auto-Updated Daily</span></div></div></div><div class="h-20"><div class="max-w-7xl mx-auto h-full px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md flex-shrink-0"><img alt="ShopeePicks Affiliate Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XKE-XY4I90M61mEOWSiMj1OeBOkhszuuD7XSEcyRjm3WNEPl6H_7W1ssW-uJV6S4so1t0lqekavLaP87AnTmvXH4SzyRLvhUZ963ewuBhLVPS2o8z4W6CMWa2lY8um3y2Sl_uh0UbaaRil-vE1wCAPV2j83rE9lsuVw6mxyKxpnEx7HTeeMNnhI9f_YU67TJhSr4wGyGLOVsHVex1wFgeBdz9k8mmWbaSb1Pz5ONANap_MTUUVlfOZWA4"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary leading-none tracking-tight">ShopeePicks</span><span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-widest mt-0.5">Curated Deals Hub</span></div></div><div class="flex-1 max-w-2xl hidden lg:flex flex-col gap-1"><div class="flex items-center bg-surface-container-low rounded-xl px-space-sm py-1.5 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_rgba(178,34,4,0.3)] transition-all"><select class="bg-transparent text-on-surface-variant font-label-action text-body-sm px-space-xs border-r border-outline-variant/40 focus:outline-none cursor-pointer"><option>All Categories</option><option>Tech &amp; Gadgets</option><option>Home &amp; Living</option><option>Beauty &amp; Fashion</option><option>Vouchers</option></select><div class="flex-1 flex items-center px-space-sm"><span class="material-symbols-outlined text-on-surface-variant text-lg mr-space-xs">search</span><input class="w-full bg-transparent text-on-surface font-body-sm placeholder:text-on-surface-variant focus:outline-none" placeholder="Search verified Shopee deals, brands, or flash promo codes..." type="text"/></div><button class="bg-primary hover:bg-primary-container text-on-primary px-space-md py-1.5 rounded-lg font-label-action text-body-sm flex items-center gap-1 transition-colors"><span>Find Deals</span></button></div><div class="flex items-center gap-space-xs overflow-x-auto whitespace-nowrap pt-0.5"><span class="font-label-badge text-label-badge text-on-surface-variant flex items-center gap-0.5"><span class="material-symbols-outlined text-xs text-primary">local_fire_department</span> Trending:</span><a class="font-label-badge text-label-badge bg-surface-container px-2 py-0.5 rounded-full text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors" href="#">Air Fryer</a><a class="font-label-badge text-label-badge bg-surface-container px-2 py-0.5 rounded-full text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors" href="#">Mechanical Keyboard</a><a class="font-label-badge text-label-badge bg-surface-container px-2 py-0.5 rounded-full text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors" href="#">Oversized Tees</a><a class="font-label-badge text-label-badge bg-surface-container px-2 py-0.5 rounded-full text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors" href="#">Wireless Earbuds</a></div></div><div class="flex items-center gap-space-md flex-shrink-0"><a class="hidden sm:flex items-center gap-space-xs bg-tertiary-container hover:bg-tertiary text-on-tertiary px-space-md py-2 rounded-xl transition-colors font-label-action text-body-sm shadow-[0_1px_4px_rgba(0,105,71,0.2)]" href="#"><span class="material-symbols-outlined text-base">send</span><span>Telegram Deals</span><span class="bg-on-tertiary text-tertiary text-[10px] font-bold px-1.5 py-0.2 rounded-full uppercase leading-tight">Live</span></a><div class="flex items-center gap-space-xs pl-space-xs"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeLx9k34O9nTJJ_gKi6Oupv5QR4VpKAJYSSJKGhlqWY76u9PEyxv5WHTdJbyEMOdNDXFz-DxvLyrG9oRUWDr7_XOUcS2Bc7mDDOoxgRcaQpkZj5W8XMdIKawa1-QufdBAMT41fsO6egoFEOy_MhCbSd5LAoRe7-I2gLWv6LEeGBmJxqpxUSOTR-68yoJ6arhdOmOE1Ruzk-D_510lgE67pbggggPMT0gXvKK7fZTBxCTwZ2UOus5GHsg"/><span class="absolute -bottom-1 -right-1 bg-tertiary text-on-tertiary rounded-full p-0.5 flex items-center justify-center"><span class="material-symbols-outlined text-[10px] leading-none">verified</span></span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-action text-body-sm text-on-surface leading-tight">Curator Pick</span><span class="font-label-badge text-label-badge text-tertiary">Verified Curator</span></div></div></div></div></div><div class="bg-surface-container-lowest/80 border-t border-outline-variant/20"><div class="max-w-7xl mx-auto px-margin"><nav class="flex items-center gap-space-lg overflow-x-auto whitespace-nowrap" data-active-classes="text-primary font-headline-sm border-b-2 border-primary"><a class="py-2.5 font-label-action text-body-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5" data-path="top-deals" href="#">Top Deals</a><a class="py-2.5 font-label-action text-body-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5" data-path="flash-sales" href="#">Flash Sales</a><a class="py-2.5 font-label-action text-body-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5" data-path="tech-gadgets" href="#">Tech &amp; Gadgets</a><a class="py-2.5 font-label-action text-body-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5" data-path="home-living" href="#">Home &amp; Living</a><a class="py-2.5 font-label-action text-body-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5" data-path="beauty-fashion" href="#">Beauty &amp; Fashion</a><a class="py-2.5 font-label-action text-body-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5" data-path="vouchers-codes" href="#">Vouchers &amp; Codes</a></nav></div></div></header><main class="w-full pt-36 bg-background min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Subtle Dimmed Blurred Backdrop simulating Modal context over landing feed -->
+<div class="fixed inset-0 z-40 bg-on-surface/40 backdrop-blur-md transition-opacity duration-300"></div>
+<!-- Modal Viewport Container -->
+<div class="relative z-50 w-full max-w-6xl mx-auto my-6 px-3 sm:px-6">
+<div class="bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden flex flex-col">
+<!-- 1. Modal Top Bar -->
+<div class="bg-surface-container-low px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2 flex-wrap min-w-0">
+<nav class="flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<span class="hover:text-primary cursor-pointer transition-colors">Tech &amp; Gadgets</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Chargers &amp; Cables</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="font-headline-sm text-on-surface truncate">Baseus 65W GaN5 Pro</span>
+</nav>
+<div class="inline-flex items-center gap-1 bg-tertiary text-on-tertiary px-2.5 py-0.5 rounded-full font-label-badge text-label-badge shadow-sm">
+<span class="material-symbols-outlined text-xs">verified</span>
+<span>Curator Lab Tested • Official Shopee Mall</span>
+</div>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<button class="flex items-center gap-1 bg-surface-container hover:bg-surface-container-high text-on-surface px-3 py-1.5 rounded-lg font-label-action text-body-sm transition-all active:scale-95" id="shareBtn">
+<span class="material-symbols-outlined text-base text-secondary">share</span>
+<span class="hidden sm:inline">Share Deal</span>
+</button>
+<button class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all active:scale-95" id="bookmarkBtn" title="Save Deal">
+<span class="material-symbols-outlined text-base">bookmark_border</span>
+</button>
+<button class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container hover:bg-error-container hover:text-on-error-container text-on-surface transition-all" title="Close Modal">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Inner Modal Body -->
+<div class="p-4 sm:p-6 lg:p-8 flex flex-col gap-8 max-h-[839px] overflow-y-auto">
+<!-- 2. Main Product & Buying Bar (Top Split Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+<!-- Left: Product Gallery Preview -->
+<div class="lg:col-span-5 flex flex-col gap-3">
+<div class="relative w-full aspect-square bg-surface-container-low rounded-xl overflow-hidden shadow-sm flex items-center justify-center p-4 group">
+<!-- Floating Pill Badges -->
+<div class="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
+<span class="bg-primary text-on-primary font-label-badge text-label-badge px-2 py-0.5 rounded-md shadow-md uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">local_fire_department</span> -63% OFF
+                </span>
+<span class="bg-surface-container-lowest/95 backdrop-blur text-primary font-label-badge text-label-badge px-2 py-0.5 rounded-md shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span> Shopee Mall Guarantee
+                </span>
+<span class="bg-tertiary-container text-on-tertiary-container font-label-badge text-label-badge px-2 py-0.5 rounded-md shadow-sm">
+                  Lowest in 90 Days
+                </span>
+</div>
+<div class="absolute top-3 right-3 z-10">
+<span class="bg-surface-container-lowest/90 backdrop-blur rounded-full px-2 py-1 font-label-badge text-label-badge text-on-surface-variant flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary">visibility</span> 4.2k viewing
+                </span>
+</div>
+<!-- Main Preview Image -->
+<img class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" data-alt="High quality studio shot of Baseus 65W GaN5 Pro Dual USB-C Fast Charger in matte black, angled view showing dual Type-C and USB-A ports with illuminated icy blue LED indicator, crisp white backdrop with soft neutral shadows, ultra clean e-commerce tech aesthetic." id="mainProductImg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTzOx5upRApAAwtROoQ6x1ysyadNzFYzNyw4UmDWFlk9NzDfFL-8sQ42UuaMKUIxjO2E64IPNW-5ydDvfg0vjxfvOGl8fUS3KNB5fOwb7jJd-hZmAv3MwyoqY9P_PM0tDCSc3MJ_TENmwta57Kxi-Kuro6xrppXHPtMN5gq9sJU6CoqTrwqK_k273Q43OoFG_ZvUwFNBQv_IjjNToGomwyWz2L1FJNblO9zoEZ4qrwojw6bBmhAdPlYA"/>
+</div>
+<!-- Thumbnail Selector -->
+<div class="grid grid-cols-4 gap-2">
+<button class="thumb-btn aspect-square bg-surface-container rounded-lg p-1.5 overflow-hidden shadow-sm ring-2 ring-primary transition-all">
+<img class="w-full h-full object-contain" data-alt="Detailed close up front angle of the Baseus 65W GaN5 Pro charger with folding US/PH wall prongs visible in clean modern studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtgCzDYzi_tE7pXHqMFfbScF95_-EtXiioOMSc4J0yz6oLTlsGGexUBzpjUGLvpY5Cby0Lh3_W1FHhGzRP8eFBaxeRswXiRW-Ui_BNKX8XFai4eYsxQNF_a8aygK6WjzYUqQtbYILC0HkBnukiK7cjlM3nxvg1DWP6cRJNRWiJUuHhjcYO8n1gkJoEljUDJvLTmwY6I5wljUwz8Amm3HENsFMioUTwxm4fpCrTh9yPWQlfWQ-tujJjHQ"/>
+</button>
+<button class="thumb-btn aspect-square bg-surface-container-low rounded-lg p-1.5 overflow-hidden hover:bg-surface-container transition-all">
+<img class="w-full h-full object-contain" data-alt="Port view of the Baseus 65W GaN charger displaying two USB Type-C ports and one USB-A port with orange internal accents, clean tech backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN_Z0GaLzsN62aTPxh1DY2gqEGnoYJizQVgMppxcLQ1RX2VNLO-iwZWiKkvmWyWLeTBeccL1smsGiP8tpUBujhn7LdiJBGdGt1_5qpMCK3CC2mhf7C6PLF8Bk3h0DQQ8uGpvQQTAmiTRY7cZ3dweNTt602rEAWIolmACJK5sj3Cdrje1dJMVOCV8UWXhHZUOnbTWANiDXeQxlUcsCRd2HXiBQRn7gTB3spVoM-MKPBPFxuUaZoRUiJ5g"/>
+</button>
+<button class="thumb-btn aspect-square bg-surface-container-low rounded-lg p-1.5 overflow-hidden hover:bg-surface-container transition-all">
+<img class="w-full h-full object-contain" data-alt="Baseus 65W charger placed neatly next to an Apple iPhone and MacBook Air on a minimalist oak desk, scale comparison shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeHpCfz6x7NG_69ySKYExaXbrIM5JBJrUl-IzV89BQm4TSBwKt1fKJK0-MeHWPtoAjuQmmkQSOSWfxEFS3VxVFqunbwEtC5If5U1ly1DLTeClqcgMd20Cp8s5yT4JZmu7pTO3ksuL9O7SMqscvCafU23MU-febilB7dLcu8KAhJB4wIu1w21UmmomdoGOh4tTc29xhnMndT94p3EALJMrsHqL4I3646tJoov7Lomx7EPM18E2vUze5EA"/>
+</button>
+<button class="thumb-btn aspect-square bg-surface-container-low rounded-lg p-1.5 overflow-hidden hover:bg-surface-container transition-all">
+<img class="w-full h-full object-contain" data-alt="Baseus retail box package contents showing 65W GaN adapter, 100W braided USB-C 1m cable, and warranty card laid flat on light stone surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKq0M1FDprKs0Q3wGQuSCivrXQOrEohLc_vKJYAW7mkrUx3zMZf-ZM4xEKvUVYbbmbJ-0Ty-wOEehJ_OuQD-Vf09_1aPPZ1A7y2-Fxo3T5_uH2eFI5Y8Qg6RUOxHboM2BA1A0MRbLVyG5SysisD62j5D8y35QAkgbgQ3YwAyEjUy8WF0nGb7bca77Eszo_lRj9judeaRs2o5pNKiK8CEq3TTUo_HnPCZgxg2nAjzGjNOO6KyH3DDZcOQ"/>
+</button>
+</div>
+<!-- Fast Spec Badges Grid -->
+<div class="grid grid-cols-2 gap-2 pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2 bg-surface-container-low p-2 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-base">bolt</span>
+<span>65W Max Single Port</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low p-2 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-base">electric_bolt</span>
+<span>GaN 5th Gen Tech</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low p-2 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-base">security</span>
+<span>12-Month Official Warranty</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low p-2 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-base">local_shipping</span>
+<span>Shopee Xpress 2-Day Delivery</span>
+</div>
+</div>
+</div>
+<!-- Right: Deal Title, Merchant Trust, Stacked Price, CTAs -->
+<div class="lg:col-span-7 flex flex-col gap-4">
+<!-- Seller info block -->
+<div class="flex flex-wrap items-center justify-between gap-2 bg-surface-container-low px-3.5 py-2.5 rounded-xl">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs uppercase shadow-sm">
+                  B
+                </div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-on-surface text-sm">Baseus Official Flagship Store</span>
+<span class="bg-primary text-on-primary font-label-badge text-[10px] px-1.5 py-0.2 rounded font-bold uppercase">Mall</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-[10px] px-1.5 py-0.2 rounded font-bold">Preferred+</span>
+</div>
+<div class="flex items-center gap-3 font-body-sm text-body-sm text-secondary pt-0.5">
+<span class="flex items-center text-primary font-bold"><span class="material-symbols-outlined text-xs mr-0.5" style="font-variation-settings: 'FILL' 1;">star</span> 4.9</span>
+<span>185k Ratings</span>
+<span>99% Chat Response</span>
+</div>
+</div>
+</div>
+<span class="text-tertiary font-label-badge text-label-badge bg-surface-container-lowest px-2 py-1 rounded-md shadow-xs">
+                Verified Direct Merchant
+              </span>
+</div>
+<!-- Product Title -->
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+                Baseus 65W GaN5 Pro Ultra-Fast Charger (Dual Type-C + USB) - BPS II Fast Charging Tech
+              </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Model: CCGAN65E5 • Compatible with M1/M2/M3 MacBook, iPad Pro, iPhone 15/14/13, Samsung S24 45W PPS Super Fast Charging.
+              </p>
+</div>
+<!-- Pricing Calculation Card -->
+<div class="bg-surface-container-low p-4 sm:p-5 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex flex-wrap items-baseline gap-3">
+<span class="font-body-sm text-body-sm text-on-surface-variant uppercase tracking-wider font-semibold">Promo Deal Price</span>
+<span class="font-label-numeric-price text-3xl sm:text-4xl text-primary font-extrabold tracking-tight">₱699</span>
+<span class="font-label-numeric-strike text-label-numeric-strike text-secondary line-through">₱1,899</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-badge text-label-badge px-2 py-0.5 rounded-full font-bold">
+                  SAVE ₱1,200 (-63%)
+                </span>
+</div>
+<!-- Rebates & Shipping mini tags -->
+<div class="flex flex-wrap items-center gap-2 pt-1 font-body-sm text-body-sm">
+<span class="bg-surface-container-lowest px-2.5 py-1 rounded-lg text-tertiary font-medium flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-sm">toll</span> +70 Shopee Coins Rebate
+                </span>
+<span class="bg-surface-container-lowest px-2.5 py-1 rounded-lg text-tertiary font-medium flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-sm">local_shipping</span> Free Shipping (Min. Spend ₱0)
+                </span>
+<span class="bg-surface-container-lowest px-2.5 py-1 rounded-lg text-secondary font-medium flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-sm">assignment_return</span> 7 Days Free Return
+                </span>
+</div>
+<!-- Urgent Stock Progress Bar -->
+<div class="bg-surface-container-lowest p-3 rounded-xl flex flex-col gap-1.5 shadow-xs">
+<div class="flex items-center justify-between font-label-badge text-label-badge">
+<span class="text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs animate-pulse">local_fire_department</span> Only 14 left in stock at this promo price!
+                  </span>
+<span class="text-secondary">89% Claimed</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary-container to-primary h-full w-[89%] rounded-full transition-all duration-500"></div>
+</div>
+</div>
+<!-- Stackable Voucher Selector Panel -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl flex flex-col gap-2.5 shadow-xs">
+<div class="flex items-center justify-between font-label-action text-body-sm">
+<span class="text-on-surface font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-base">confirmation_number</span> 
+                    Stackable Vouchers Applied
+                  </span>
+<span class="text-tertiary font-bold text-xs">2 Vouchers Active</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+<div class="flex items-center justify-between bg-surface-container-low p-2 rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-sm">check_circle</span>
+<span class="font-bold text-on-surface">SHOPEEPICKS15</span>
+</div>
+<span class="text-primary font-bold">-₱105 OFF</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-2 rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-sm">check_circle</span>
+<span class="font-bold text-on-surface">Baseus Follow Store</span>
+</div>
+<span class="text-primary font-bold">-₱50 OFF</span>
+</div>
+</div>
+<!-- Net Effective Price Highlight -->
+<div class="flex items-center justify-between pt-1 font-body-sm border-t-0">
+<span class="text-secondary">Net Effective Checkout Price:</span>
+<div class="flex items-baseline gap-1.5">
+<span class="text-xs text-on-surface-variant font-medium">₱699 - ₱155 vouchers =</span>
+<span class="font-label-numeric-price text-2xl text-tertiary font-black">₱544</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary CTAs -->
+<div class="flex flex-col gap-2.5 pt-1">
+<a class="w-full bg-primary hover:bg-primary-container active:scale-[0.99] text-on-primary py-3.5 px-6 rounded-xl font-label-action text-headline-sm flex items-center justify-center gap-2 shadow-lg shadow-primary/25 transition-all" href="#">
+<span>Buy on Shopee for ₱544</span>
+<span class="font-normal text-xs opacity-90">(Direct Affiliate Link)</span>
+<span class="material-symbols-outlined text-lg">open_in_new</span>
+</a>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+<button class="flex items-center justify-center gap-2 bg-surface-container hover:bg-surface-container-high text-on-surface py-2.5 px-4 rounded-xl font-label-action text-body-sm transition-all active:scale-95" id="copyCodeBtn">
+<span class="material-symbols-outlined text-base text-primary">content_copy</span>
+<span>Copy Code: SHOPEEPICKS15</span>
+</button>
+<button class="flex items-center justify-center gap-2 bg-surface-container hover:bg-surface-container-high text-on-surface py-2.5 px-4 rounded-xl font-label-action text-body-sm transition-all active:scale-95" id="alertBtn">
+<span class="material-symbols-outlined text-base text-secondary">notifications_active</span>
+<span>Set Price Drop Alert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. 90-Day Interactive Price History Graph Section -->
+<div class="bg-surface-container-low p-4 sm:p-6 rounded-xl flex flex-col gap-4">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">monitoring</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">90-Day Verified Price History</h3>
+<span class="bg-tertiary-container text-on-tertiary-container font-label-badge text-label-badge px-2 py-0.5 rounded-md">
+                Real Shopee Price Tracker
+              </span>
+</div>
+<div class="font-body-sm text-body-sm text-secondary">
+              Updated 2 hours ago from Shopee Mall API
+            </div>
+</div>
+<!-- Key Metrics Ribbon -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-xs flex flex-col">
+<span class="font-label-badge text-label-badge text-secondary uppercase">All-Time Record Low</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-label-numeric-price text-xl text-tertiary">₱680</span>
+<span class="font-body-sm text-xs text-on-surface-variant">(During 6.6 Mega Sale)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-xs flex flex-col">
+<span class="font-label-badge text-label-badge text-secondary uppercase">90-Day Median Price</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-label-numeric-price text-xl text-on-surface">₱1,150</span>
+<span class="font-body-sm text-xs text-on-surface-variant">(Typical Non-Sale)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-xs flex flex-col">
+<span class="font-label-badge text-label-badge text-secondary uppercase">Current Deal Rating</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-label-numeric-price text-xl text-primary">₱699</span>
+<span class="font-label-badge text-label-badge text-tertiary bg-tertiary-fixed px-1.5 py-0.5 rounded">Great Buy: -39%</span>
+</div>
+</div>
+</div>
+<!-- Inline SVG High-Fidelity Price Chart -->
+<div class="bg-surface-container-lowest p-4 sm:p-5 rounded-xl shadow-xs flex flex-col gap-3">
+<div class="flex items-center justify-between text-xs text-secondary font-label-badge">
+<span>May 10</span>
+<span>June 6 (6.6)</span>
+<span>July 7 (7.7)</span>
+<span>July 25 (Payday)</span>
+<span>August 8 (8.8 Mega Live)</span>
+</div>
+<!-- Chart SVG -->
+<div class="relative w-full h-48 sm:h-56">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 800 220">
+<defs>
+<lineargradient id="priceGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#b22204" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#b22204" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Gridlines -->
+<line stroke="#eceef0" stroke-dasharray="4" stroke-width="1" x1="0" x2="800" y1="30" y2="30"></line>
+<line stroke="#eceef0" stroke-dasharray="4" stroke-width="1" x1="0" x2="800" y1="90" y2="90"></line>
+<line stroke="#eceef0" stroke-dasharray="4" stroke-width="1" x1="0" x2="800" y1="150" y2="150"></line>
+<line stroke="#eceef0" stroke-width="1" x1="0" x2="800" y1="190" y2="190"></line>
+<!-- Y-Axis Price Labels -->
+<text fill="#8f7069" font-family="Plus Jakarta Sans" font-size="10" x="5" y="26">₱1,899 (Inflated MSRP)</text>
+<text fill="#565e74" font-family="Plus Jakarta Sans" font-size="10" x="5" y="86">₱1,250 (Average Plateau)</text>
+<text fill="#565e74" font-family="Plus Jakarta Sans" font-size="10" x="5" y="146">₱899 (Payday Deals)</text>
+<text fill="#006947" font-family="Plus Jakarta Sans" font-size="10" font-weight="bold" x="5" y="186">₱699 (Current Flash Deal)</text>
+<!-- Area Fill -->
+<polygon fill="url(#priceGradient)" points="
+                  0,95
+                  70,95
+                  140,90
+                  210,192
+                  260,95
+                  380,92
+                  450,188
+                  520,95
+                  620,135
+                  710,25
+                  740,190
+                  800,190
+                  800,210
+                  0,210
+                "></polygon>
+<!-- Trend Line -->
+<polyline fill="none" points="
+                  0,95
+                  70,95
+                  140,90
+                  210,192
+                  260,95
+                  380,92
+                  450,188
+                  520,95
+                  620,135
+                  710,25
+                  740,190
+                  800,190
+                " stroke="#b22204" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline>
+<!-- Marked Data Points -->
+<!-- 6.6 Sale Drop -->
+<circle cx="210" cy="192" fill="#006947" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<!-- 7.7 Drop -->
+<circle cx="450" cy="188" fill="#006947" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Fake Markup Warning Spike -->
+<circle cx="710" cy="25" fill="#ba1a1a" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Current Active Deal -->
+<circle class="animate-pulse" cx="800" cy="190" fill="#b22204" r="7" stroke="#ffffff" stroke-width="2.5"></circle>
+</svg>
+<!-- Floating Interactive Marker 1: Fake Price Spike Flag -->
+<div class="absolute top-2 right-24 hidden sm:flex items-center gap-1 bg-surface-container-highest px-2 py-1 rounded-md text-[10px] text-on-surface font-label-badge shadow-xs">
+<span class="material-symbols-outlined text-xs text-error">warning</span>
+<span>Pre-Sale Markup: ₱1,899 (Avoided)</span>
+</div>
+<!-- Floating Interactive Marker 2: Current Verified Price Callout -->
+<div class="absolute bottom-2 right-2 flex flex-col items-end">
+<div class="bg-primary text-on-primary px-2.5 py-1 rounded-lg text-xs font-label-badge shadow-md flex items-center gap-1">
+<span>NOW: ₱699</span>
+<span class="material-symbols-outlined text-xs">south</span>
+</div>
+</div>
+</div>
+<!-- Insight note from tracker -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-base flex-shrink-0 mt-0.5">insights</span>
+<p>
+<strong class="text-on-surface">Curator Anti-Fake Discount Analysis:</strong> The merchant raised the sticker price to ₱1,899 on August 4th before dropping it for the 8.8 Flash Event. However, at <strong class="text-primary font-bold">₱699 (and ₱544 net)</strong>, this is only ₱19 above the 2024 all-time lowest record. Solid buy recommendation.
+              </p>
+</div>
+</div>
+</div>
+<!-- 4. Hands-on Curator Lab Review & Testing Verdict -->
+<div class="bg-surface-container-low p-4 sm:p-6 rounded-xl flex flex-col gap-6">
+<div class="flex flex-wrap items-center justify-between gap-3 border-b border-surface-container pb-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">biotech</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Hands-on Curator Lab Review</h3>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">72-hour benchmark testing in the Manila Gadget Lab</p>
+</div>
+<!-- Curator Score Card -->
+<div class="flex items-center gap-3 bg-surface-container-lowest px-4 py-2 rounded-xl shadow-xs">
+<div class="flex flex-col text-right">
+<span class="font-label-badge text-label-badge text-tertiary uppercase">Curator Verdict</span>
+<span class="font-headline-sm text-sm text-on-surface">Editor's Choice GaN</span>
+</div>
+<div class="flex items-center gap-1 bg-primary text-on-primary px-3 py-1 rounded-lg font-label-numeric-price text-xl font-black">
+<span>4.8</span>
+<span class="text-xs font-normal opacity-80">/5</span>
+</div>
+</div>
+</div>
+<!-- Lab Test Results Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-xs flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-badge text-label-badge uppercase">Heat Dissipation</span>
+<span class="material-symbols-outlined text-sm text-tertiary">device_thermostat</span>
+</div>
+<span class="font-headline-sm text-on-surface text-base font-bold">41°C Peak Temp</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sustained 65W load for 2 hours. Well below 65°C safety threshold.</p>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-xs flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-badge text-label-badge uppercase">Charging Speed</span>
+<span class="material-symbols-outlined text-sm text-primary">speed</span>
+</div>
+<span class="font-headline-sm text-on-surface text-base font-bold">50% in 28 Mins</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">M2 MacBook Air tested from 0%. Full 100% capacity in 1 hr 14 mins.</p>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-xs flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-badge text-label-badge uppercase">Protocol Support</span>
+<span class="material-symbols-outlined text-sm text-tertiary">power</span>
+</div>
+<span class="font-headline-sm text-on-surface text-base font-bold">PD3.0 / QC4+ / PPS</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Triggers 45W Super Fast Charging 2.0 on Samsung S23/S24 series.</p>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-xs flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-badge text-label-badge uppercase">Portability Factor</span>
+<span class="material-symbols-outlined text-sm text-secondary">straighten</span>
+</div>
+<span class="font-headline-sm text-on-surface text-base font-bold">59% Smaller</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Compared directly against OEM standard Apple 67W single-port brick.</p>
+</div>
+</div>
+<!-- Pros & Cons Asymmetric Columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-xs flex flex-col gap-2.5">
+<span class="font-headline-sm text-tertiary flex items-center gap-1.5 text-sm">
+<span class="material-symbols-outlined text-base">thumb_up</span>
+                Curator Praises (Pros)
+              </span>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm mt-0.5">check</span>
+<span><strong>Dynamic BPS II Power Split:</strong> Intelligently drops to 45W + 20W when plugging phone and laptop concurrently.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm mt-0.5">check</span>
+<span><strong>Foldable Plug Prongs:</strong> Fits effortlessly into backpack pen-sleeves without scratching laptops.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm mt-0.5">check</span>
+<span><strong>Free 100W E-Marker Cable:</strong> High quality braided cable included in box (saves extra ₱250).</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-xs flex flex-col gap-2.5">
+<span class="font-headline-sm text-error flex items-center gap-1.5 text-sm">
+<span class="material-symbols-outlined text-base">thumb_down</span>
+                Points to Consider (Cons)
+              </span>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-sm mt-0.5">close</span>
+<span><strong>Brief Power Reset:</strong> Disconnects for 1-2 seconds when a 2nd device is plugged in as chip renegotiates wattage.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-sm mt-0.5">close</span>
+<span><strong>Faint Coil Noise:</strong> Minimal high-frequency buzz detectable in dead-silent rooms under 65W max load.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-sm mt-0.5">close</span>
+<span><strong>3-Port Split:</strong> Plugging 3 items splits output to 45W + 15W shared, which slows simultaneous laptop charging.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Curator Signature Block -->
+<div class="flex items-center gap-3 bg-surface-container-lowest p-3 rounded-xl shadow-xs">
+<img class="w-10 h-10 rounded-full object-cover ring-2 ring-surface-container-high" data-alt="Portrait photo of Filipino male technology hardware reviewer smiling with glasses and lanyard in gadget testing laboratory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1s4AOS9uIZ29Y_v9gF4UZxnd9M2Fc2HIsYusN-xTMj_FUyVzjFndyH0fO1_PHPAK66nyIHTiZZrk1Q0conBrffSlRW7xC7BCmGiJ4n6ZoEs104cC5H4R4JbbuDiQjmNf3yWisUO6ngXZQvbm_O2FGAHM923POVphw74rrHmlUdmptMaaKkOFtj3BvTG7fF0fzpHRewaTyzue10A9w8NHjnGkEouUoTG_G3uH-_186DjMdHrPMi3O05Q"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-sm text-on-surface">David V.</span>
+<span class="font-label-badge text-[10px] text-tertiary bg-tertiary-fixed px-1.5 py-0.2 rounded font-semibold">Lead Hardware Curator</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                "If you are still carrying the bulky brick that came with your work laptop, this deal is an absolute no-brainer at ₱544 net. Tested and verified authentic Shopee Mall inventory."
+              </p>
+</div>
+</div>
+</div>
+<!-- 5. Stackable Voucher & Promo Strategy Breakdown -->
+<div class="bg-surface-container-low p-4 sm:p-6 rounded-xl flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">account_balance_wallet</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Voucher Stacking Cheat-Sheet</h3>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-xs text-on-surface-variant font-label-badge">How to get ₱544</span>
+</div>
+<!-- Step By Step Voucher Stacking Flow -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-xs flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs">1</span>
+<span class="font-label-badge text-tertiary bg-tertiary-fixed px-1.5 py-0.2 rounded">Platform Level</span>
+</div>
+<span class="font-headline-sm text-sm text-on-surface font-bold">Claim Free Shipping ₱0 Min Spend</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Claim via the Shopee 8.8 Homepage voucher portal before checking out. Eliminates standard ₱55 Metro Manila delivery fee.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-xs flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs">2</span>
+<span class="font-label-badge text-primary bg-primary-fixed px-1.5 py-0.2 rounded">ShopeePicks Code</span>
+</div>
+<span class="font-headline-sm text-sm text-on-surface font-bold">Apply 'SHOPEEPICKS15'</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Input in the voucher promo box. Deducts 15% capped at ₱105 for tech &amp; electronics category products.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-xs flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs">3</span>
+<span class="font-label-badge text-secondary bg-secondary-fixed px-1.5 py-0.2 rounded">Shop Follow Voucher</span>
+</div>
+<span class="font-headline-sm text-sm text-on-surface font-bold">Collect Baseus Follow Voucher</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Click 'Follow' on the Baseus Official Mall landing page to redeem immediate ₱50 off voucher (min. spend ₱500).
+              </p>
+</div>
+</div>
+<!-- Total Calculation Breakdown Banner -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-xs flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-xs text-secondary uppercase font-bold tracking-wider">Final Calculation</span>
+<span class="font-body-md text-on-surface">Original Retail (₱1,899) → Flash Deal (₱699) → Stacked Vouchers (-₱155)</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col text-right">
+<span class="font-label-badge text-label-badge text-tertiary">Total Accumulated Savings</span>
+<span class="font-label-numeric-price text-xl text-primary font-bold">₱1,355 Saved</span>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-4 py-2 rounded-lg font-label-action text-body-sm flex items-center gap-1 shadow-sm transition-all">
+<span>Copy All Codes</span>
+<span class="material-symbols-outlined text-sm">done_all</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 6. Community Shopper Feedback & Verified Shopee Reviews -->
+<div class="bg-surface-container-low p-4 sm:p-6 rounded-xl flex flex-col gap-4">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">reviews</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Verified Shopee Buyer Feedback</h3>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-xs font-semibold text-on-surface">4.9 ★ (185k Shopee Mall reviews)</span>
+</div>
+<div class="flex items-center gap-2 text-xs font-body-sm text-secondary">
+<span class="material-symbols-outlined text-tertiary text-sm">verified</span>
+<span>All reviews pulled from Shopee verified orders</span>
+</div>
+</div>
+<!-- Review Cards Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-xs flex flex-col justify-between gap-3">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-xs font-bold text-on-surface">m*****8 (Quezon City)</span>
+<div class="flex text-primary text-xs">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="text-[10px] text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified Buyer • 2 Days via Shopee Xpress
+                </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  "Legit Baseus! Super bilis mag-charge ng Dell XPS 13 ko and iPhone sabay. Hindi umiinit masyado unlike my generic charger before. Best 8.8 purchase so far."
+                </p>
+</div>
+<div class="flex items-center gap-1 text-[11px] text-secondary">
+<span class="material-symbols-outlined text-xs">photo_camera</span>
+<span>Photo review verified</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-xs flex flex-col justify-between gap-3">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-xs font-bold text-on-surface">krizza_tech (Cebu City)</span>
+<div class="flex text-primary text-xs">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="text-[10px] text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified Buyer • Shopee Mall Official
+                </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  "Tested with USB power meter: clean 64.2W sustained output on my MacBook Pro. Super compact design. Free 100W cable included is very thick and durable."
+                </p>
+</div>
+<div class="flex items-center gap-1 text-[11px] text-secondary">
+<span class="material-symbols-outlined text-xs">thumb_up</span>
+<span>48 shoppers found this helpful</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-xs flex flex-col justify-between gap-3">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-xs font-bold text-on-surface">j_delacruz92 (Pampanga)</span>
+<div class="flex text-primary text-xs">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs text-outline-variant" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="text-[10px] text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified Buyer • Shopee Payday Sale
+                </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  "Awesome value with the ShopeePicks voucher! Arrived safely in bubble wrap. It does reset for 1 sec when plugging another phone, but that's normal for BPS chips."
+                </p>
+</div>
+<div class="flex items-center gap-1 text-[11px] text-secondary">
+<span class="material-symbols-outlined text-xs">thumb_up</span>
+<span>21 shoppers found this helpful</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 7. Sticky Modal Action Footer Bar -->
+<div class="sticky bottom-0 bg-surface-container-lowest/95 backdrop-blur-md px-4 sm:px-6 py-3.5 shadow-xl flex flex-wrap items-center justify-between gap-4">
+<!-- Affiliate notice micro text -->
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-xs max-w-sm sm:max-w-md">
+<span class="material-symbols-outlined text-secondary text-base flex-shrink-0">shield</span>
+<p class="line-clamp-1">
+<strong>Affiliate Disclosure:</strong> ShopeePicks earns qualifying commission from Shopee at zero extra cost to you.
+          </p>
+</div>
+<!-- Sticky Quick Price & Outbound Action -->
+<div class="flex items-center gap-4 ml-auto">
+<div class="flex flex-col text-right">
+<span class="font-body-sm text-xs text-secondary">Deal: ₱699</span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-badge text-xs text-tertiary font-semibold">Net:</span>
+<span class="font-label-numeric-price text-2xl text-primary font-black leading-none">₱544</span>
+</div>
+</div>
+<a class="bg-primary hover:bg-primary-container active:scale-95 text-on-primary font-label-action text-body-sm px-5 py-2.5 rounded-xl shadow-md flex items-center gap-1.5 transition-all" href="#">
+<span>Proceed to Shopee</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Interaction JavaScript -->
+<script>
+    // Copy Code Feedback
+    const copyBtn = document.getElementById('copyCodeBtn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function() {
+        navigator.clipboard.writeText('SHOPEEPICKS15');
+        const originalText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<span class="material-symbols-outlined text-base text-tertiary">check</span><span class="text-tertiary font-bold">Code Copied!</span>';
+        setTimeout(() => {
+          copyBtn.innerHTML = originalText;
+        }, 2200);
+      });
+    }
+
+    // Price Drop Alert Micro Interaction
+    const alertBtn = document.getElementById('alertBtn');
+    if (alertBtn) {
+      alertBtn.addEventListener('click', function() {
+        alertBtn.innerHTML = '<span class="material-symbols-outlined text-base text-tertiary">done</span><span>Alert Active: &le; ₱500</span>';
+        alertBtn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+      });
+    }
+
+    // Share Button Micro Interaction
+    const shareBtn = document.getElementById('shareBtn');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', function() {
+        if (navigator.share) {
+          navigator.share({
+            title: 'Baseus 65W GaN5 Pro ₱544 Shopee Deal',
+            text: 'Verified 63% OFF on Baseus Official Shopee Mall via ShopeePicks!',
+            url: window.location.href,
+          });
+        } else {
+          navigator.clipboard.writeText(window.location.href);
+          shareBtn.innerHTML = '<span class="material-symbols-outlined text-base text-tertiary">done</span><span class="text-tertiary font-bold">Deal Link Copied!</span>';
+          setTimeout(() => {
+            shareBtn.innerHTML = '<span class="material-symbols-outlined text-base text-secondary">share</span><span class="hidden sm:inline">Share Deal</span>';
+          }, 2000);
+        }
+      });
+    }
+
+    // Image thumbnail switcher simulation
+    const thumbButtons = document.querySelectorAll('.thumb-btn');
+    const mainImg = document.getElementById('mainProductImg');
+    thumbButtons.forEach((btn) => {
+      btn.addEventListener('click', function() {
+        thumbButtons.forEach(b => b.classList.remove('ring-2', 'ring-primary'));
+        this.classList.add('ring-2', 'ring-primary');
+        const clickedImg = this.querySelector('img');
+        if (clickedImg && mainImg) {
+          mainImg.setAttribute('data-alt', clickedImg.getAttribute('data-alt'));
+        }
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 text-on-surface mt-space-xl"><div class="bg-surface-container-low py-space-md border-b border-outline-variant/20"><div class="max-w-7xl mx-auto px-margin flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-start md:items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-xl flex-shrink-0">policy</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"><strong class="text-on-surface font-semibold">Affiliate Transparency:</strong> As a Shopee affiliate, we earn from qualifying purchases at no extra cost to you. Pricing, stock, and promo voucher availability are subject to merchant updates.</p></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant">Data Source</span><span class="bg-surface-container-high px-2 py-0.5 rounded font-label-badge text-label-badge text-on-surface">Shopee Open Platform</span></div></div></div><div class="max-w-7xl mx-auto px-margin py-space-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md pr-0 lg:pr-space-xl"><div class="flex items-center gap-space-sm"><img alt="ShopeePicks Affiliate Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XKE-XY4I90M61mEOWSiMj1OeBOkhszuuD7XSEcyRjm3WNEPl6H_7W1ssW-uJV6S4so1t0lqekavLaP87AnTmvXH4SzyRLvhUZ963ewuBhLVPS2o8z4W6CMWa2lY8um3y2Sl_uh0UbaaRil-vE1wCAPV2j83rE9lsuVw6mxyKxpnEx7HTeeMNnhI9f_YU67TJhSr4wGyGLOVsHVex1wFgeBdz9k8mmWbaSb1Pz5ONANap_MTUUVlfOZWA4"/><span class="font-headline-md text-headline-md text-primary font-bold">ShopeePicks</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">The premier curator of verified discounts, daily price drops, and stacked discount codes for smart shoppers across Southeast Asia. Every deal is manually verified by our team of shopping insiders.</p><div class="flex flex-col gap-space-xs mt-space-xs"><span class="font-label-action text-body-sm text-on-surface">Subscribe for Secret Daily Drops</span><div class="flex items-center gap-space-xs"><input class="bg-surface-container-low border border-outline-variant/40 rounded-xl px-space-md py-2 font-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none flex-1" placeholder="Enter your email..." type="email"/><button class="bg-primary hover:bg-primary-container text-on-primary px-space-md py-2 rounded-xl font-label-action text-body-sm transition-colors">Join VIP</button></div></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-on-surface">Top Categories</h4><ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><li class="hover:text-primary cursor-pointer transition-colors">Smartphone Accessories</li><li class="hover:text-primary cursor-pointer transition-colors">Smart Kitchen Appliances</li><li class="hover:text-primary cursor-pointer transition-colors">Korean Skincare Essentials</li><li class="hover:text-primary cursor-pointer transition-colors">Ergonomic Desk Setups</li><li class="hover:text-primary cursor-pointer transition-colors">Minimalist Streetwear</li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-on-surface">Voucher Guides</h4><ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><li class="hover:text-primary cursor-pointer transition-colors">How to Stack 3 Vouchers</li><li class="hover:text-primary cursor-pointer transition-colors">Free Shipping Claiming Schedule</li><li class="hover:text-primary cursor-pointer transition-colors">ShopeePay Coins Cashback Tips</li><li class="hover:text-primary cursor-pointer transition-colors">Midnight Flash Sale Cheatsheet</li><li class="hover:text-primary cursor-pointer transition-colors">Brand Box Opening Deals</li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-on-surface">Community Hub</h4><ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><li class="hover:text-primary cursor-pointer transition-colors">Telegram Broadcast (24/7)</li><li class="hover:text-primary cursor-pointer transition-colors">Discord Deal Hunters</li><li class="hover:text-primary cursor-pointer transition-colors">Curator Verification Portal</li><li class="hover:text-primary cursor-pointer transition-colors">Report Expired Link</li><li class="hover:text-primary cursor-pointer transition-colors">Affiliate Partnership Inquiries</li></ul></div></div><div class="border-t border-outline-variant/20 py-space-md"><div class="max-w-7xl mx-auto px-margin flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><p>© 2024 ShopeePicks. All rights reserved. Independent affiliate portal.</p><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors" href="#">Terms of Use</a><a class="hover:text-primary transition-colors" href="#">Affiliate Disclosure</a><a class="hover:text-primary transition-colors" href="#">Contact Team</a></div></div></div></footer></body></html>

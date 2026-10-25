@@ -1,0 +1,6 @@
+{
+  "name": "ShopeePicks - Shopee Affiliate Hub & Involve Asia Engine",
+  "description": "High-conversion Shopee affiliate portal powered by Involve Asia API, automated catalog updates, real-time conversion & postback tracking, and price history analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
