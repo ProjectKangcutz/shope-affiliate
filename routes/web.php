@@ -3,41 +3,57 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DealController;
 use App\Http\Controllers\ProductController;
-use App\Models\Product;
-use App\Models\Click;
-use App\Services\InvolveAsiaService;
-use Illuminate\Support\Str;
+use App\Http\Controllers\Admin\AdminAuthController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ConversionPostbackController;
+use App\Http\Middleware\AdminMiddleware;
 
-// Halaman Katalog Tampilan Preview
+/*
+|--------------------------------------------------------------------------
+| 1. STOREFRONT PUBLIC ROUTES
+|--------------------------------------------------------------------------
+*/
 Route::get('/', [DealController::class, 'index'])->name('home');
-
-// Rute Redirect Afiliasi dengan Sub-ID Tracking Involve Asia
-Route::get('/go/{id}', function ($id, InvolveAsiaService $involveAsia) {
-    $product = Product::findOrFail($id);
-
-    $clickId = 'CLK_' . time() . '_' . Str::random(6);
-    $sub1 = session()->getId();
-    $sub2 = $product->sku;
-    $sub3 = request('placement', 'deals_page');
-
-    Click::create([
-        'click_id'   => $clickId,
-        'sub_id1'    => $sub1,
-        'sub_id2'    => $sub2,
-        'sub_id3'    => $sub3,
-        'target_url' => $product->shopee_url,
-        'ip_address' => request()->ip(),
-        'user_agent' => request()->userAgent(),
-    ]);
-
-    $deeplink = $involveAsia->generateDeeplink($product->shopee_url, [
-        'sub_id1' => $sub1,
-        'sub_id2' => $sub2,
-        'sub_id3' => $sub3,
-    ]);
-
-    return redirect()->away($deeplink);
-})->name('affiliate.redirect');
-
-// Halaman Detail Produk Berdasarkan SKU (contoh: /product/baseus-65w-gan5)
 Route::get('/product/{sku}', [ProductController::class, 'show'])->name('product.show');
+Route::get('/products/{sku}', [ProductController::class, 'show'])->name('products.show');
+Route::get('/go/{id}', [DealController::class, 'redirect'])->name('affiliate.redirect');
+
+/*
+|--------------------------------------------------------------------------
+| 2. INVOLVE ASIA S2S WEBHOOK POSTBACK
+|--------------------------------------------------------------------------
+*/
+Route::post('/api/involve-asia/postback', [ConversionPostbackController::class, 'handlePostback'])->name('involve.postback');
+
+/*
+|--------------------------------------------------------------------------
+| 3. SECURE ADMIN PORTAL ROUTES
+|--------------------------------------------------------------------------
+*/
+Route::redirect('/home', '/');
+Route::redirect('/login', '/admin/login')->name('login');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+
+    // Login Admin
+    Route::middleware(['throttle:5,1'])->group(function () {
+        Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('login');
+        Route::post('/login', [AdminAuthController::class, 'login'])->name('login.submit');
+    });
+
+    // Protected Admin Routes
+    Route::middleware(['auth', AdminMiddleware::class])->group(function () {
+        Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
+        Route::post('/sync-catalog', [AdminController::class, 'syncCatalog'])->name('sync');
+
+        // Form Tambah Produk
+        Route::post('/product/store', [AdminController::class, 'storeProduct'])->name('product.store');
+        Route::post('/products/store', [AdminController::class, 'storeProduct'])->name('products.store');
+
+        // Tombol Hapus Produk (admin.product.delete & admin.product.destroy)
+        Route::match(['delete', 'post', 'get'], '/product/{id}/delete', [AdminController::class, 'destroyProduct'])->name('product.delete');
+        Route::match(['delete', 'post', 'get'], '/product/{id}', [AdminController::class, 'destroyProduct'])->name('product.destroy');
+
+        Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
+    });
+});
