@@ -135,6 +135,72 @@
       </div>
     </div>
 
+<!-- KOTAK 1-CLICK AUTO IMPORT DARI LINK SHOPEE -->
+    <div class="bg-gradient-to-r from-red-600 to-[#b22204] text-white p-6 rounded-2xl shadow-md flex flex-col gap-3">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-2xl">bolt</span>
+        <div>
+          <h3 class="text-sm font-extrabold">1-Click Auto Import dari Link Shopee</h3>
+          <p class="text-xs text-white/80">Judul, Foto Asli CDN, dan Brand terdeteksi otomatis. Masukkan harga promo agar pas 100%!</p>
+        </div>
+      </div>
+
+      <form action="{{ route('admin.product.auto-import') }}" method="POST" class="grid grid-cols-1 sm:grid-cols-12 gap-2.5 mt-1 text-xs">
+        @csrf
+        <!-- Link Shopee Wajib -->
+        <div class="sm:col-span-5">
+          <label class="block text-[11px] font-bold text-white/90 mb-1">Link Produk Shopee</label>
+          <input 
+            type="url" 
+            name="shopee_url" 
+            required 
+            placeholder="https://shopee.co.id/... atau https://s.shopee.co.id/..." 
+            class="w-full bg-white text-gray-900 px-3.5 py-2.5 rounded-xl focus:outline-none shadow-inner font-medium"
+          />
+        </div>
+
+        <!-- Harga Promo Pas -->
+        <div class="sm:col-span-2">
+          <label class="block text-[11px] font-bold text-white/90 mb-1">Harga Promo (Rp)</label>
+          <input 
+            type="number" 
+            name="price" 
+            placeholder="Misal: 19500" 
+            class="w-full bg-white text-gray-900 px-3 py-2.5 rounded-xl focus:outline-none shadow-inner font-bold text-primary"
+          />
+        </div>
+
+        <!-- Harga Coret Normal -->
+        <div class="sm:col-span-2">
+          <label class="block text-[11px] font-bold text-white/90 mb-1">Harga Coret (Rp)</label>
+          <input 
+            type="number" 
+            name="original_price" 
+            placeholder="Misal: 45000" 
+            class="w-full bg-white text-gray-900 px-3 py-2.5 rounded-xl focus:outline-none shadow-inner text-gray-500"
+          />
+        </div>
+
+        <!-- Kategori -->
+        <div class="sm:col-span-2">
+          <label class="block text-[11px] font-bold text-white/90 mb-1">Kategori</label>
+          <select name="category" class="w-full bg-white text-gray-800 px-2.5 py-2.5 rounded-xl font-semibold focus:outline-none">
+            <option value="tech">Tech & Gadgets</option>
+            <option value="home">Home & Living</option>
+            <option value="kitchen">Kitchen & Dining</option>
+            <option value="beauty">Beauty & Fashion</option>
+          </select>
+        </div>
+
+        <!-- Tombol Import -->
+        <div class="sm:col-span-1 flex items-end">
+          <button type="submit" class="w-full bg-gray-900 hover:bg-black text-white py-2.5 rounded-xl font-bold transition-all shadow cursor-pointer text-center">
+            ⚡ Import
+          </button>
+        </div>
+      </form>
+    </div>
+
     <!-- 3. Form Tambah Produk Shopee Baru (Cepat & Praktis) -->
     <div class="bg-white p-6 rounded-2xl shadow-xs border border-gray-200 flex flex-col gap-4">
       <div class="flex items-center gap-2 border-b pb-3">

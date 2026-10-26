@@ -44,23 +44,27 @@ class AdminController extends Controller
         ));
     }
 
-    /**
-     * 1-Click Sync Katalog Produk Shopee via Involve Asia API
-     */
-    public function syncCatalog(InvolveAsiaService $involveAsia)
+    public function syncCatalog(\App\Services\InvolveAsiaService $involveAsia)
     {
         try {
             $result = $involveAsia->syncProductCatalog();
-            $syncedCount = $result['products_synced'] ?? Product::count();
+            $syncedCount = $result['products_synced'] ?? \App\Models\Product::count();
             $drops = $result['price_drops'] ?? 0;
+            $newAdded = $result['new_added'] ?? 0;
 
-            return back()->with('success', "Katalog Shopee berhasil disinkronkan! ({$syncedCount} produk diperiksa, {$drops} penurunan harga terverifikasi tercatat).");
+            $msg = "Katalog Shopee berhasil disinkronkan! ({$syncedCount} produk diperiksa, {$drops} penurunan harga";
+            if ($newAdded > 0) {
+                $msg .= ", {$newAdded} produk trending baru otomatis ditambahkan ke etalase";
+            }
+            $msg .= "). Riwayat grafik 90 hari diperbarui!";
+
+            return back()->with('success', $msg);
         } catch (\Throwable $e) {
-            $productsCount = Product::count();
+            $productsCount = \App\Models\Product::count();
             return back()->with('success', "Katalog lokal berhasil disegarkan! ({$productsCount} produk Shopee dipantau).");
         }
     }
-
+    
     /**
      * Tambah Produk Shopee Manual (Mendukung SKU & URL Foto Gambar Produk)
      */
@@ -104,5 +108,33 @@ class AdminController extends Controller
     {
         Product::findOrFail($id)->delete();
         return back()->with('success', 'Produk berhasil dihapus dari katalog!');
+    }
+
+    public function autoImportByUrl(Request $request, \App\Services\InvolveAsiaService $involveAsia)
+    {
+        if ($request->isMethod('get')) {
+            return redirect()->route('admin.dashboard');
+        }
+
+        $validated = $request->validate([
+            'shopee_url'     => 'required|url',
+            'category'       => 'nullable|string',
+            'main_image'     => 'nullable|url',
+            'price'          => 'nullable|numeric',
+            'original_price' => 'nullable|numeric',
+            'brand'          => 'nullable|string',
+        ]);
+
+        $product = $involveAsia->autoImportFromShopeeUrl(
+            $validated['shopee_url'], 
+            $validated['category'] ?? 'tech',
+            $validated['main_image'] ?? null,
+            $validated['price'] ?? null,
+            $validated['original_price'] ?? null,
+            $validated['brand'] ?? null
+        );
+
+        return redirect()->route('admin.dashboard')
+        ->with('success', "Produk berhasil diimpor otomatis dari Shopee: {$product->name}!");
     }
 }

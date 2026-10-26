@@ -46,11 +46,15 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
         Route::post('/sync-catalog', [AdminController::class, 'syncCatalog'])->name('sync');
 
-        // Form Tambah Produk
+        // Form Tambah Manual
         Route::post('/product/store', [AdminController::class, 'storeProduct'])->name('product.store');
         Route::post('/products/store', [AdminController::class, 'storeProduct'])->name('products.store');
 
-        // Tombol Hapus Produk (admin.product.delete & admin.product.destroy)
+        // AUTO-IMPORT (Mendukung POST dan GET agar tidak pernah 404):
+        Route::match(['post', 'get'], '/product/auto-import', [AdminController::class, 'autoImportByUrl'])->name('product.auto-import');
+        Route::match(['post', 'get'], '/products/auto-import', [AdminController::class, 'autoImportByUrl'])->name('products.auto-import');
+
+        // Hapus Produk
         Route::match(['delete', 'post', 'get'], '/product/{id}/delete', [AdminController::class, 'destroyProduct'])->name('product.delete');
         Route::match(['delete', 'post', 'get'], '/product/{id}', [AdminController::class, 'destroyProduct'])->name('product.destroy');
 
